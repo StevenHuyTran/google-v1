@@ -1,24 +1,23 @@
-import Header from "@/components/Header";
 import Head from "next/head";
-import SearchHeader from "@/components/SearchHeader";
-import SearchResults from "@/components/SearchResults";
+import SearchHeader from "../components/SearchHeader";
+import SearchResults from "../components/SearchResults";
+import Response from "../Response";
 import { useRouter } from "next/router";
-import Response from "@/Response";
-import ImageResults from "@/components/ImageResults";
+import ImageResults from "../components/ImageResults";
 
-export default function search({ results }) {
+export default function Search({ results }) {
   console.log(results);
   const router = useRouter();
   return (
     <div>
       <Head>
-        <title>{router.query.term} - Search Page</title>
+        <title>{router.query.term} - Search page</title>
       </Head>
 
       {/* Search Header */}
       <SearchHeader />
 
-      {/* Search web and images Results */}
+      {/* Search web and Images Results */}
       {router.query.searchType === "image" ? (
         <ImageResults results={results} />
       ) : (
