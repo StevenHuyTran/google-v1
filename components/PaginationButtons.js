@@ -13,7 +13,7 @@ export default function PaginationButtons() {
           href={`/search?term=${router.query.term}&searchType=${
             router.query.searchType
           }&start=${startIndex - 10}`}
-        >
+          legacyBehavior>
           <div className="cursor-pointer flex flex-col items-center hover:underline">
             <ChevronLeftIcon className="h-5" />
             <p>Previous</p>
@@ -25,7 +25,7 @@ export default function PaginationButtons() {
           href={`/search?term=${router.query.term}&searchType=${
             router.query.searchType
           }&start=${startIndex + 10}`}
-        >
+          legacyBehavior>
           <div className="cursor-pointer flex flex-col items-center hover:underline">
             <ChevronRightIcon className="h-5" />
             <p>Next</p>
